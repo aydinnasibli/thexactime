@@ -36,23 +36,24 @@ export default function Header() {
     useEffect(() => {
         if (navigateToHome) {
             navigate('/')
-
+            setNavigateToHome(false)
         }
         if (navigateToTimezones) {
             navigate('/timezones')
+            setNavigateToTimezones(false)
 
         }
         if (navigateToCalendars) {
             navigate('/calendars')
-
+            setNavigateToCalendars(false)
         }
         if (navigateToHistorical) {
             navigate('/historicaltimelines')
-
+            setNavigateToHistorical(false)
         }
         if (navigateToAnnual) {
             navigate('/annualwwevents')
-
+            setNavigateToAnnual(false)
         }
         else {
             console.log('Navigation did not occur')
