@@ -9,7 +9,6 @@ function Home() {
                 <p>Hello Necmettinyo</p>
 
             </div>
-            <div style={{ fontSize: '250px' }}>22:58:01</div>
 
 
         </div >
