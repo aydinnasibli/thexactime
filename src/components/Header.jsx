@@ -11,6 +11,7 @@ import {
     PopoverGroup,
     PopoverPanel,
 } from '@headlessui/react'
+import ContactUsButton from './ContactUsButton'
 import {
     ArrowPathIcon,
     Bars3Icon,
@@ -63,7 +64,8 @@ export default function Header() {
 
 
     return (
-        <header >
+
+        <header className='bg-our-bg' style={{ top: '0', position: 'sticky' }}  >
             <nav aria-label="Global" className="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
@@ -93,14 +95,14 @@ export default function Header() {
                         </PopoverPanel>
                     </Popover>
 
-                    <button onClick={() => setNavigateToTimezones(true)} className='text-sm font-semibold leading-6 text-gray-900'>Time Zones</button>
-                    <button onClick={() => setNavigateToCalendars(true)} className='text-sm font-semibold leading-6 text-gray-900'>Calendars</button>
-                    <button onClick={() => setNavigateToHistorical(true)} className='text-sm font-semibold leading-6 text-gray-900'>Historical Timelines</button>
-                    <button onClick={() => setNavigateToAnnual(true)} className='text-sm font-semibold leading-6 text-gray-900'>Annual Worldwide Events</button>
+                    <button onClick={() => setNavigateToTimezones(true)} className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:underline-offset-4'>Time Zones</button>
+                    <button onClick={() => setNavigateToCalendars(true)} className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:underline-offset-4'>Calendars</button>
+                    <button onClick={() => setNavigateToHistorical(true)} className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:underline-offset-4'>Historical Timelines</button>
+                    <button onClick={() => setNavigateToAnnual(true)} className='text-sm font-semibold leading-6 text-gray-900 hover:underline hover:underline-offset-4'>Annual Worldwide Events</button>
 
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <button onClick={() => setNavigateToHome(true)} className='text-sm font-semibold leading-6 text-gray-900'>Contact Us<span aria-hidden="true">&rarr;</span></button>
+                    <ContactUsButton onClick={() => setNavigateToHome(true)} >Contact Us</ContactUsButton>
 
                 </div>
             </nav>
@@ -112,7 +114,7 @@ export default function Header() {
                             <span className="sr-only">Your Company</span>
                             <img
                                 alt=""
-                                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                                src="../public/cropped_image.ico"
                                 className="h-8 w-auto"
                             />
                         </a>
@@ -136,13 +138,15 @@ export default function Header() {
 
                             </div>
                             <div className="py-6">
-                                <button className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>Contact Us</button>
+                                <ContactUsButton onClick={() => setNavigateToHome(true)} >Contact Us</ContactUsButton>
 
                             </div>
                         </div>
                     </div>
                 </DialogPanel>
             </Dialog>
+            <hr className="h-px mb-10 h-0.5 border-0 bg-our-black" />
+
         </header>
     )
 }

@@ -6,8 +6,10 @@ function Layout({ children }) {
         <>
 
             <Header />
-            <hr className="h-px mb-10 h-0.5  border-0 bg-our-black" />
-            {children}
+            <body className="mx-auto flex max-w-6xl items-center justify-center p-6 lg:px-8">
+                {children}
+            </body>
+
             <Footer />
         </>
 

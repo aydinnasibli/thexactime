@@ -9,8 +9,12 @@ export default {
     backgroundColor: {
       'our-bg': '#FFF8E8',
       'our-black': 'black',
+      'our-white': 'white',
+      'our-contact': '#FFE0B5'
     }
   },
-  plugins: [],
+  plugins: [
+
+  ],
   darkMode: 'class',
 }
