@@ -31,7 +31,7 @@ export default function ParallaxTimeline() {
     return (
         <div className='mt-40 mb-96 lg:mb-72' style={{ background: '#dfdfdf', }}>
             <div className='flex justify-center items-center '>
-                <Parallax style={{ overflowX: 'scroll', msOverflowStyle: 'none', width: '70%', height: '30%', scrollbarWidth: 'none', borderRadius: '30px', }} className={styles.container} ref={parallax} pages={60} horizontal>
+                <Parallax style={{ overflowX: 'scroll', msOverflowStyle: 'none', zIndex: '-1', width: '70%', height: '30%', scrollbarWidth: 'none', borderRadius: '30px', }} className={styles.container} ref={parallax} pages={60} horizontal>
                     <Page offset={0} gradient="pink" onClick={() => scroll(1)} />
                     <Page offset={1} gradient="pink" onClick={() => scroll(2)} />
                     <Page offset={2} gradient="pink" onClick={() => scroll(3)} />
