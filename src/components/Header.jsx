@@ -1,5 +1,7 @@
 
 import { useEffect, useState } from 'react'
+import Logo from '../assets/cropped_image.png'
+
 import {
     Dialog,
     DialogPanel,
@@ -114,7 +116,7 @@ export default function Header() {
                             <span className="sr-only">Your Company</span>
                             <img
                                 alt=""
-                                src="../public/cropped_image.ico"
+                                src={Logo}
                                 className="h-8 w-auto"
                             />
                         </a>

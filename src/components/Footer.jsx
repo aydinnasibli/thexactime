@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Logo from '../assets/cropped_image.png'
 function Footer() {
     return (
         <footer className="w-full" style={{ position: 'relative', left: '0', bottom: '0', width: "100%" }}>
@@ -9,7 +9,7 @@ function Footer() {
                         <a href="https://thexactime.com/" className="flex justify-center lg:justify-start">
                             <img
                                 alt=""
-                                src="../public/cropped_image.ico"
+                                src={Logo}
                                 className="w-16 md:w-28 lg:w-32"
                             />
                         </a>
