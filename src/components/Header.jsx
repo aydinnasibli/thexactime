@@ -130,11 +130,10 @@ export default function Header() {
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
-
-                                <button onClick={() => setNavigateToTimezones(true)} className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>Time Zones</button>
-                                <button onClick={() => setNavigateToCalendars(true)} className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>Calendars</button>
-                                <button onClick={() => setNavigateToHistorical(true)} className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>Historical Timelines</button>
-                                <button onClick={() => setNavigateToAnnual(true)} className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>Annual Worldwide Events</button>
+                                <button onClick={() => { setNavigateToTimezones(true); setMobileMenuOpen(false); }} className='-mx-3 block rounded-lg px-3 py-2'>Time Zones</button>
+                                <button onClick={() => { setNavigateToCalendars(true); setMobileMenuOpen(false); }} className='-mx-3 block rounded-lg px-3 py-2'>Calendars</button>
+                                <button onClick={() => { setNavigateToHistorical(true); setMobileMenuOpen(false); }} className='-mx-3 block rounded-lg px-3 py-2'>Historical Timelines</button>
+                                <button onClick={() => { setNavigateToAnnual(true); setMobileMenuOpen(false); }} className='-mx-3 block rounded-lg px-3 py-2'>Annual Worldwide Events</button>
 
                             </div>
                             <div className="py-6">
