@@ -145,7 +145,7 @@ export default function Header() {
                     </div>
                 </DialogPanel>
             </Dialog>
-            <hr className="h-px mb-10 h-0.5 border-0 bg-our-black" />
+            <hr className="h-px mb-10  border-0 bg-our-black" />
 
         </header>
     )

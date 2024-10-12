@@ -15,15 +15,14 @@ function App() {
 
   return (
     <>
-
-      <Layout >
+      <Layout>
         <CustomRoute>
           <Route path="/*" element={<Home />} />
           <Route path="/timezones" element={<Timezones />} />
           <Route path="/calendars" element={<Calendars />} />
-          <Route path="/historicaltimelines" element={<HistoricalTimelines />} />
           <Route path="/annualwwevents" element={<AnnualWorldwideEvents />} />
 
+          <Route path="/historicaltimelines" element={<HistoricalTimelines />} />
 
         </CustomRoute>
       </Layout>
