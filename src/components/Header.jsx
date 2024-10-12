@@ -65,7 +65,7 @@ export default function Header() {
 
     return (
 
-        <header className='bg-our-bg' style={{ top: '0', position: 'sticky', }}  >
+        <header className='bg-our-bg' style={{ top: '0', position: 'sticky', zIndex: '1' }}  >
             <nav aria-label="Global" className="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
