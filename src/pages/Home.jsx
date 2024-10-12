@@ -1,4 +1,5 @@
 import React from 'react'
+import ParallaxTimeline from '../components/ParallaxTimeline'
 
 function Home() {
     return (
@@ -10,7 +11,6 @@ function Home() {
             </div>
 
             <div className="mx-auto flex max-w-8xl items-center justify-between text-9xl" >22:58:01</div>
-
 
         </div >
     )
