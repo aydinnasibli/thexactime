@@ -4,8 +4,7 @@
 
 @layer base {
     html {
-        @apply bg-our-bg;
 
-
+        @apply bg-gradient-to-r from-bggradient via-bggradientvia to-bggradientto
     }
 }

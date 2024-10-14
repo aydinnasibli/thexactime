@@ -10,7 +10,7 @@ function Home() {
 
             </div>
 
-            <div className="mx-auto flex max-w-8xl items-center justify-between text-4xl" >22:58:01</div>
+            <div className="mx-auto flex max-w-8xl items-center justify-between text-8xl" >22:58:01</div>
 
         </div >
     )

@@ -67,8 +67,8 @@ export default function Header() {
 
     return (
 
-        <header className='bg-our-bg' style={{ top: '0', position: 'sticky', zIndex: '1' }}  >
-            <nav aria-label="Global" className="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-8">
+        <header className='bg-gradient-to-r from-bggradient via-bggradientvia to-bggradientto ' style={{ top: '0', position: 'sticky', zIndex: '1' }}  >
+            <nav aria-label="Global" className=" bg-clip-border border-2 rounded-2xl border-black-900 mx-auto flex max-w-8xl  items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
@@ -146,7 +146,6 @@ export default function Header() {
                     </div>
                 </DialogPanel>
             </Dialog>
-            <hr className="h-px mb-10  border-0 bg-our-black" />
 
         </header>
     )

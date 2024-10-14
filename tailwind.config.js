@@ -11,6 +11,11 @@ export default {
       'our-black': 'black',
       'our-white': 'white',
       'our-contact': '#FFE0B5'
+    },
+    colors: {
+      'bggradient': '#F8C794',
+      'bggradientvia': '#FFE0B5',
+      'bggradientto': '#FFF2D7',
     }
   },
   plugins: [
