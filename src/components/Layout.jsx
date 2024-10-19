@@ -6,7 +6,7 @@ function Layout({ children }) {
         <>
 
             <Header />
-            <body className="mx-auto flex max-w-8xl items-center justify-center p-6 lg:px-8">
+            <body className="mx-auto flex  items-center justify-center p-6 lg:px-8">
                 {children}
             </body>
 

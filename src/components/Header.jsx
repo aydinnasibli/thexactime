@@ -25,7 +25,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { useNavigate } from 'react-router-dom'
-
+import { useMediaQuery } from 'react-responsive'
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -35,6 +35,8 @@ export default function Header() {
     const [navigateToCalendars, setNavigateToCalendars] = useState(false)
     const [navigateToHistorical, setNavigateToHistorical] = useState(false)
     const [navigateToAnnual, setNavigateToAnnual] = useState(false)
+    const isMobile = useMediaQuery({ maxWidth: 767 })
+
 
     useEffect(() => {
         if (navigateToHome) {
@@ -67,8 +69,8 @@ export default function Header() {
 
     return (
 
-        <header className='bg-gradient-to-r from-bggradient via-bggradientvia to-bggradientto ' style={{ top: '0', position: 'sticky', zIndex: '1' }}  >
-            <nav aria-label="Global" className=" bg-clip-border border-2 rounded-2xl border-black-900 mx-auto flex max-w-8xl  items-center justify-between p-6 lg:px-8">
+        <header className='bg-gradient-to-r from-bggradient via-bggradientvia to-bggradientto rounded-2xl lg:sticky md:sticky lg:top-0 md:top-0  ' style={{ zIndex: '1' }} >
+            <nav aria-label="Global" className=" md:bg-clip-border md:border-2 md:rounded-2xl md:border-black-900 lg:bg-clip-border lg:border-2 lg:rounded-2xl lg:border-black-900 mx-auto flex   items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
@@ -146,7 +148,9 @@ export default function Header() {
                     </div>
                 </DialogPanel>
             </Dialog>
-
+            {
+                isMobile && <hr />
+            }
         </header>
     )
 }
