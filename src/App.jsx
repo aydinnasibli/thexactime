@@ -3,25 +3,77 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './pages/Home'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Layout from './components/Layout'
-import CustomRoute from './services/CustomRoute'
-function App() {
-  const [count, setCount] = useState(0)
+import { AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
+import Calendars from './pages/Calendars'
+import TimeZones from './pages/TimeZones'
 
+function App() {
+  const location = useLocation()
   return (
     <>
       <Layout>
-        <CustomRoute>
-          <Route path="/*" element={<div><Home /></div>} />
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/*" element={
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 100 }}
+                transition={{ opacity: { duration: 0.5, ease: "easeOut" }, x: { duration: 0.5, ease: "easeOut" } }}
+              >
+                <Home />
+              </motion.div>
+            } />
 
-          <Route path="/calendars" element={<div className='text-center'>Calendars</div>} />
-          <Route path="/annualwwevents" element={<div className='text-center'>Annual</div>} />
-          <Route path="/timezones" element={<div className='text-center'>Timezones</div>} />
-          <Route path="/historicaltimelines" element={<div className='text-center'>Historical Timelines</div>} />
+            <Route path="/calendars" element={
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 100 }}
+                transition={{ opacity: { duration: 0.5, ease: "easeOut" }, x: { duration: 0.5, ease: "easeOut" } }}
+              >
+                <Calendars />
+              </motion.div>
+            } />
 
+            <Route path="/annualwwevents" element={
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 100 }}
+                transition={{ opacity: { duration: 0.5, ease: "easeOut" }, x: { duration: 0.5, ease: "easeOut" } }}
+              >
+                <div>Annual</div>
+              </motion.div>
+            } />
 
-        </CustomRoute>
+            <Route path="/timezones" element={
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 100 }}
+                transition={{ opacity: { duration: 0.5, ease: "easeOut" }, x: { duration: 0.5, ease: "easeOut" } }}
+              >
+                <TimeZones />
+              </motion.div>
+            } />
+
+            <Route path="/historicaltimelines" element={
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 100 }}
+                transition={{ opacity: { duration: 0.5, ease: "easeOut" }, x: { duration: 0.5, ease: "easeOut" } }}
+              >
+                <div>Historical</div>
+              </motion.div>
+            } />
+
+          </Routes>
+        </AnimatePresence>
       </Layout>
     </>
   )
